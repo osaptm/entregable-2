@@ -44,7 +44,7 @@ body{
 .card{
   width: 50vw;
   padding: 25px;
-  background-color: white;
+  background-color: rgb(92, 131, 143);
   display: flex;
   flex-direction: column;
   justify-content: center;
