@@ -16,7 +16,7 @@ function App() {
   const changeUnitTemperature = () => {
     if(IsCelsiusOrFahrenheit === 'C') {
       setIsCelsiusOrFahrenheit('F');
-      setGrades(Math.round(((ObjOpenWheater.main?.temp) + Number.EPSILON) * 100) / 100);
+      setGrades(Math.round((((ObjOpenWheater.main?.temp-273.15)*(9/5)) + 32 + Number.EPSILON) * 100) / 100);
     }
     if(IsCelsiusOrFahrenheit === 'F') {
       setIsCelsiusOrFahrenheit('C');
