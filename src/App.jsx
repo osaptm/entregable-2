@@ -46,12 +46,8 @@ function App() {
             }
           </h2>
           <div className='data-wheather'>
-              <div className='temperature'>               
-                {/* <img src={imagesWheather["img_"+ObjOpenWheater.weather?.[0].icon]} alt="" width="200" height="200" /> */}
-
-        
+              <div className='temperature'>             
                 <img src={ObjOpenWheater.weather?.[0].icon!==undefined?"https://openweathermap.org/img/wn/"+ObjOpenWheater.weather?.[0].icon+"@4x.png":""} alt="" width="200" height="200" />
-
                 <h2>{Grades}{" "}{IsCelsiusOrFahrenheit}º</h2>
               </div>
               <div className='other-data'>
