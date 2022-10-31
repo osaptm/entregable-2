@@ -34,7 +34,7 @@ function App() {
 
     return (
     <>
-      <div className="loader"></div>
+   
       <div className='card'>
           <h1>Wheather App</h1>
           <h2>
