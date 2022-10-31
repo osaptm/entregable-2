@@ -25,8 +25,8 @@ function App() {
   }
 
   useEffect(()=>{  
-    if(Object.keys(ObjOpenWheater).length !== 0 && Object.keys(ObjGoogleMaps).length !== 0){
-      console.log(ObjOpenWheater);
+    document.body.style.backgroundImage = "url('"+imagesWheather["img_"+ObjOpenWheater.weather?.[0].icon]+"')";
+    if(Object.keys(ObjOpenWheater).length !== 0 && Object.keys(ObjGoogleMaps).length !== 0){      
       changeUnitTemperature();   
     }
   },[ObjOpenWheater, ObjGoogleMaps]);
@@ -48,7 +48,10 @@ function App() {
           <div className='data-wheather'>
               <div className='temperature'>               
                 {/* <img src={imagesWheather["img_"+ObjOpenWheater.weather?.[0].icon]} alt="" width="200" height="200" /> */}
-                <img src={"https://openweathermap.org/img/wn/"+ObjOpenWheater.weather?.[0].icon+"@4x.png"} alt="" width="200" height="200" />
+
+        
+                <img src={ObjOpenWheater.weather?.[0].icon!==undefined?"https://openweathermap.org/img/wn/"+ObjOpenWheater.weather?.[0].icon+"@4x.png":""} alt="" width="200" height="200" />
+
                 <h2>{Grades}{" "}{IsCelsiusOrFahrenheit}º</h2>
               </div>
               <div className='other-data'>
