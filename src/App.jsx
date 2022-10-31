@@ -35,7 +35,7 @@ function App() {
     return (
     <>
    
-      <div className='card'>
+      <div className='cardPositive' style={GeoEstate?{display:'block'}:{display:'none'}}> 
           <h1>Wheather App</h1>
           <h2>
             {
@@ -48,10 +48,9 @@ function App() {
           <div className='data-wheather'>
               <div className='temperature'>
                 {
-                (ObjOpenWheater.weather?.[0].icon!==undefined)?
-                  (<img src={"https://openweathermap.org/img/wn/"+ObjOpenWheater.weather?.[0].icon+"@4x.png"} alt="" width="200" height="200" />)
-                :
-                  ("")
+                  (ObjOpenWheater.weather?.[0].icon!==undefined)
+                  ?  (<img src={"https://openweathermap.org/img/wn/"+ObjOpenWheater.weather?.[0].icon+"@4x.png"} alt="" width="200" height="200" />)
+                  :  null
                 }             
                 <h2>{Grades}{" "}{IsCelsiusOrFahrenheit}º</h2>
               </div>
@@ -63,8 +62,11 @@ function App() {
                 <p><i className="fa-brands fa-drupal"></i>Humidity: {ObjOpenWheater.main?.humidity}%</p>
               </div>
           </div>
-
           <button onClick={changeUnitTemperature} className="buttonDegrees">Degrees Fº / Cº</button>
+      </div>
+      <div className='cardNegative' style={GeoEstate?{display:'none'}:{display:'block'}}>
+          <h1>Sin Acceso a Geolocalizacion</h1>
+          <p>Debe restablecer el permiso de Geolocalizacion y Actualziar la Pagina.</p>
       </div>
     </>
   )
