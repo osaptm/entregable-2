@@ -4,7 +4,7 @@ import useGeoLocation from './hooks/useGeoLocation'
 import useOpenWheater from './hooks/useOpenWheater'
 import useGoogleMaps from './hooks/useGoogleMaps';
 import imagesWheather from './assets/imagesWheather';
-
+import imgPermiso from './assets/permiso.png'
 
 function App() {
   const {GeoEstate, Latitude, Longitude, Accuracy, accessGeo} = useGeoLocation(); 
@@ -35,7 +35,7 @@ function App() {
     return (
     <>
    
-      <div className='cardPositive' style={GeoEstate?{display:'block'}:{display:'none'}}> 
+      <div className='card' style={GeoEstate?{display:'block'}:{display:'none'}}> 
           <h1>Wheather App</h1>
           <h2>
             {
@@ -64,9 +64,10 @@ function App() {
           </div>
           <button onClick={changeUnitTemperature} className="buttonDegrees">Degrees Fº / Cº</button>
       </div>
-      <div className='cardNegative' style={GeoEstate?{display:'none'}:{display:'block'}}>
+      <div className='card' style={GeoEstate?{display:'none'}:{display:'block'}}>
           <h1>Sin Acceso a Geolocalizacion</h1>
           <p>Debe restablecer el permiso de Geolocalizacion y Actualziar la Pagina.</p>
+          <img src={imgPermiso} alt="" />
       </div>
     </>
   )

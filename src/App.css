@@ -31,7 +31,7 @@ body{
   height: 100vh;
 }
 
-.cardPositive{
+.card{
   width: 50vw;
   padding: 25px;
   background-color: rgb(92, 131, 143);
@@ -47,16 +47,6 @@ body{
   color: purple;
 }
 
-.cardNegative{
-  width: 50vw;
-  padding: 25px;
-  background-color: rgb(92, 131, 143);
-  border: solid 1px #000;
-  box-shadow: 10px 10px 21px 5px rgba(0,0,0,0.84);
-  -webkit-box-shadow: 10px 10px 21px 5px rgba(0,0,0,0.84);
-  -moz-box-shadow: 10px 10px 21px 5px rgba(0,0,0,0.84);
-  color: purple;
-}
 
 .data-wheather {
   display: flex;
